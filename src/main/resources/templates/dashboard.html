@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Status Dashboard</title>
+</head>
+<body>
+<h1>File Status Dashboard</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>File Type</th>
+        <th>File Name</th>
+        <th>Uploaded By</th>
+        <th>Uploaded At</th>
+        <th>Status</th>
+    </tr>
+    {{#list}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{fileType}}</td>
+        <td>{{fileName}}</td>
+        <td>{{uploadedBy}}</td>
+        <td>{{uploadedAt}}</td>
+        <td>{{processed}}</td>
+    </tr>
+    {{/list}}
+</table>
+</body>
+</html>

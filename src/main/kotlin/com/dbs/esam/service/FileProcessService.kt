@@ -46,9 +46,9 @@ class FileProcessService @Autowired constructor(
     }
 
     @Transactional
-    fun processAdjustmentFile(readFile: ByteArray) {
+    fun processAdjustmentFile(bytes: ByteArray) {
         try {
-            val wb: Workbook = XSSFWorkbook(readFile.inputStream())
+            val wb: Workbook = XSSFWorkbook(bytes.inputStream())
             val sheet: Sheet = wb.getSheetAt(0)
             sheet.forEach {
                 if (it.rowNum > 1 && it.getCell(1).stringCellValue != "") {
