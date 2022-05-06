@@ -14,7 +14,7 @@ class S3Client {
         //TODO: Need to setup S3 client with url & credentials
     }
 
-    fun uploadFile(type: String, fileName: String, file: MultipartFile) {
+    fun uploadFile(type: String, fileName: String, file: MultipartFile): Boolean {
         //TODO: Upload file to S3 location
         log.info("Uploading file $type/$fileName to S3")
         val folder = File(type)
@@ -25,6 +25,7 @@ class S3Client {
         val uploadedFile = File(folder, fileName)
         uploadedFile.writeBytes(file.inputStream.readAllBytes())
         log.info("Uploading done")
+        return true
     }
 
     fun readFile(type: String, fileName: String): ByteArray {

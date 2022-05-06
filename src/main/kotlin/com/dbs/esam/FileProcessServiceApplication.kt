@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
 @SpringBootApplication
 @EnableScheduling
 @EnableAsync
-@EnableTransactionManagement
 class FileProcessServiceApplication
 
 fun main(args: Array<String>) {

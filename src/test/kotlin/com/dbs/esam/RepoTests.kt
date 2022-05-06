@@ -13,7 +13,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 class RepoTests @Autowired constructor(
     val testEntityManager: TestEntityManager,
     val fileStatusRepo: FileStatusRepo,
-    val adjustmentsRepo: AdjustmentsRepo
+    val adjustmentsRepo: AdjustmentsRepo,
 ) {
     @Test
     fun `test file status save`() {

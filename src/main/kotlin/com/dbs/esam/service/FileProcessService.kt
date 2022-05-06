@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.scheduling.annotation.Async
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service
-import org.springframework.transaction.annotation.Transactional
 
 @Service
 class FileProcessService @Autowired constructor(
@@ -45,7 +44,6 @@ class FileProcessService @Autowired constructor(
         }
     }
 
-    @Transactional
     fun processAdjustmentFile(bytes: ByteArray) {
         try {
             val wb: Workbook = XSSFWorkbook(bytes.inputStream())
